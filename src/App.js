@@ -1,77 +1,32 @@
-import { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import List from "./page/List";
+import ListItem from "./page/ListItem";
+import Write from "./page/Write"
 import './App.css';
+import img from './github.png'
 
 function App() {
-  const [change, setChange] = useState(['남자코트 추천' ,'강남 우동맛집', '파이썬독학']);
-  const [good, setGood] = useState([0,0,0]);
-  const [modal, setModal] = useState(false);
-  const [title, setTitle] = useState(1);
-  const [input, setInput] = useState('');
-
   return (
     <div className="App">
-      <div className="black-nav">
-        <h4>RactBlog</h4>
-      </div>
+      <Link to="/blog">
+        <div className="navbar">
+          <h2>블로그</h2>
+        </div></Link>
+      <Link to="/write">
+        <div className="write">
+          <h4>글작성</h4>
+        </div></Link>
+      <a href="https://github.com/wodnjs7800/blog" target="_blank"><img src={img} /></a>
 
-      <button onClick={()=>{
-        let copy = [...change];
-        copy[0]='여자코트 추천';
-        setChange(copy);
-        }}>글수정</button>
 
-      <button onClick={()=>{
-        let copy = [...change];
-        copy.sort();
-        setChange(copy);
-        }}>가나다순정렬</button>
 
-      {
-        change.map(function(a,i){
-          return(
-            <div className="list" key={i}>
-              <h4 onClick={()=>{setModal(!modal); setTitle(i)}}>{a}
-               <span onClick={(e)=>{
-                e.stopPropagation();
-                let copy = [...good];
-                copy[i]=copy[i]+1;
-                setGood(copy);
-                }}>👍</span> {good[i]} </h4>
-              <p>3월 24일 발행</p>
-              <button onClick={()=>{
-                let copy = [...change];
-                copy.splice(i, 1);
-                setChange(copy);
-              }}>글삭제</button>
-            </div>
-          )
-        })
-      }
-        
-      <input onChange={(e)=>{setInput(e.target.value)}}></input>
-      <button onClick={()=>{
-        let copy = [...change];
-        copy.unshift(input);
-        setChange(copy);
-      }}>글생성</button>
-      
-
-      {modal === true ? 
-        <Modal 
-          change={change} title={title}
-        /> : null}
-      
-    </div>
-  )
-}
-
-function Modal(props){
-  return(
-    <div className="modal">
-      <h4>제목: {props.change[props.title]}</h4>
-      <p>날짜: </p>
-      <p>상세내용 : </p>
-      
+      <Routes>
+        <Route path="/" element={<List />} />
+        <Route path="/blog" element={<List />} />
+        <Route path="/write" element={<Write />} />
+        <Route path="/item/:id" element={<ListItem />} />
+      </Routes>
     </div>
   )
 }

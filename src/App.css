@@ -1,27 +1,46 @@
 .App {
+  margin: 0 auto;
+  margin-top: 30px; padding: 20px 20px 70px 20px;
+  background-color: rgb(107, 104, 104);
+  width: 700px;
+  border-radius: 60px;
+  position: relative;
+}
+
+.App a{
+  text-decoration: none;
+  color: black;
+}
+
+.App .navbar{
   text-align: center;
+  height: 50px; width: 200px;
+  background-color: bisque;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.black-nav {
-  background : black;
-  width : 100%;
-  display : flex;
-  color : white;
-  padding : 20px;
+.App .navbar h2{
+  margin: 0; padding-top: 10px;
 }
 
-div {
-  box-sizing : border-box
-}
-.list {
-  text-align : left;
-  padding-left : 20px;
-  border-bottom : 1px solid grey;
+.App .write{
+  text-align: center;
+  height: 40px; width: 90px;
+  background-color: rgb(239, 186, 178);
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.modal{
-  margin-top : 20px;
-  padding : 20px;
-  background : #eee;
-  text-align : left;
+.App .write h4{
+  margin: 0; padding-top: 10px;
+}
+
+.App img{
+  width: 80px;
+  position: absolute;
+  top: 30px; right: 30px;
+  border-radius: 10%;
 }

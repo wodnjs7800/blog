@@ -1,0 +1,27 @@
+.form{
+ background-color: antiquewhite;
+ width: 400px; height: 500px;
+ padding: 50px;
+ margin: 0 auto; margin-top: 20px;
+ position: relative;
+ border-radius: 20px;
+}
+
+.formtitle{
+ width: 350px; height: 50px;
+ margin: 0px 30px 30px 30px;
+ font-size: 18px;
+}
+
+.formcontent{
+ width: 350px; height: 350px;
+ margin: 0px 30px 30px 30px;
+ font-size: 15px;
+}
+
+.formbutton{
+ width: 100px; height: 50px;
+ font-size: 20px;
+ position: absolute;
+ right: 62px; bottom: 20px;
+}

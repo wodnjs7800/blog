@@ -1,0 +1,61 @@
+.list{
+ display: flex;
+}
+
+.listleft{
+ background-color: bisque;
+ width: 500px;
+ margin: 0 auto; padding: 20px 20px 40px 20px;
+ margin-top: 20px;
+ border-radius: 8px;
+}
+
+.listitem{
+ background-color: rgb(236, 239, 243);
+ padding: 10px; margin: 10px; padding-left: 30px;
+ border-radius: 8px;
+ position: relative;
+ display: flex;
+ font-size: 20px;
+}
+
+.listitem a{
+ text-decoration: none;
+ color: black;
+}
+
+.listitem p{
+ position: absolute;
+ right: 20px; top: 10px;
+ margin: 0;
+}
+
+.listitem p span{
+ color: red;
+}
+
+.delete{
+ position: absolute;
+ right: 20px; bottom: 10px;
+ font-size: 20px;
+ width: 30px; height: 30px;
+ padding: 0;
+}
+
+.modal{
+ width: 500px;
+ margin: 0 auto; padding: 20px 20px 40px 20px;
+ margin-top: 20px;
+ border-radius: 8px;
+}
+
+.modalitem{
+ background-color: rgb(236, 239, 243);
+ padding: 10px 30px;
+ border-radius: 8px;
+ font-size: 20px;
+}
+
+.modalitem p{
+ font-size: 17px;
+}
