@@ -17,9 +17,7 @@ function App() {
         <div className="write">
           <h4>글작성</h4>
         </div></Link>
-      <a href="https://github.com/wodnjs7800/blog" target="_blank"><img src={img} /></a>
-
-
+      <a href="https://github.com/wodnjs7800/blog/tree/master" target="_blank"><img src={img} /></a>
 
       <Routes>
         <Route path="/" element={<List />} />
